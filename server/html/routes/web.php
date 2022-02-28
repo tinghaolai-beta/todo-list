@@ -18,6 +18,10 @@ Route::get('/', function () {
 });
 
 
-Route::get('/test', function () {
-    return 123456;
+Route::group(['prefix' => 'todoList'], function () {
+    Route::get('/', 'TodoListController@getList');
+    Route::get('/{id}', 'TodoListController@get')->where('id', '[0-9]+');
+    Route::post('/', 'TodoListController@store');
+    Route::put('/{id}', 'TodoListController@update')->where('id', '[0-9]+');
+    Route::delete('/{id}', 'TodoListController@delete')->where('id', '[0-9]+');
 });
