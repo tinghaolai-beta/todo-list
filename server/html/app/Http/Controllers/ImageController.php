@@ -45,7 +45,7 @@ class ImageController extends Controller
         if (!$result) {
             return response()->json([
                 'status'  => 'fail',
-                'message' => 'sizeError',
+                'message' => 'uploadFail',
             ]);
         }
 
