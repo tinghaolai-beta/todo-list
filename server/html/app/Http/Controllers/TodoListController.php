@@ -47,7 +47,7 @@ class TodoListController extends Controller
 
     public function store(StoreTodoList $request)
     {
-        if ($this->todoListService->store($request->title, $request->title, auth()->user())) {
+        if ($this->todoListService->store($request->title, $request->todoContent, auth()->user())) {
             return response()->json(['status' => 'success']);
         }
 
