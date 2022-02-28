@@ -1,0 +1,4 @@
+.DS_Store
+/mysql/data/*
+!.gitkeep
+.idea
