@@ -25,3 +25,5 @@ Route::group(['prefix' => 'todoList'], function () {
     Route::put('/{id}', 'TodoListController@update')->where('id', '[0-9]+');
     Route::delete('/{id}', 'TodoListController@delete')->where('id', '[0-9]+');
 });
+
+Route::post('/image', 'ImageController@upload');
